@@ -3,7 +3,6 @@
     const hasRequest = typeof $request !== "undefined" && $request !== null;
     const url = (hasRequest && $request.url) ? $request.url : (hasResponse && $response.url ? $response.url : "");
 
-    // Helper: Giải mã Base64 an toàn trên mọi JavaScript Runtime
     function decodeBase64Safe(b64) {
         if (typeof atob !== "undefined") {
             try { return decodeURIComponent(escape(atob(b64))); } catch (_) {}
@@ -62,10 +61,10 @@
                     headers: { "Content-Type": "application/json; charset=utf-8" },
                     body: JSON.stringify({
                         "status": "success",
-                        "module": "dth",
+                        "module": "locketabc",
                         "version": "3.0",
                         "author": "Trung Hieu",
-                        "message": "Module Locket Gold & Filter VIP !"
+                        "message": "Module Locket Gold "
                     })
                 }
             });
@@ -84,16 +83,16 @@
 
     // Cấu hình thông báo Chống Scam & Chúc mừng Lên Gold DÀNH RIÊNG CHO SHADOWROCKET
     const CUSTOM_POPUP_CONFIG = {
-        "tag": "LOCKET GOLD ",
+        "tag": "LOCKET GOLD VIP",
         "tag_gradient": true,
         "tag_style": "gold_gradient",
         "title": "Đã lên Gold rồi nhé! ✨",
         "feature_set": [{
-            "title": "Locket Gold 2026",
-            "body": "Sử dụng filter và AI 💕",
-            "imageURL": "https://i.ibb.co/6cFwbQkZ/1793207893345-51238425216241447-1744175342587368869-364a1c7f2515c3737089ab5396e48341.png"
+            "title": "Locket Gold AI & Filter ",
+            "body": "Đã hiện lên popup này hãy chờ 1 xíu ",
+            "imageURL": "https://i.ibb.co/zV41vyJ2/t-i-xu-ng-1.png"
         }],
-        "primary_button_title": "Vào Dùng Ngay",
+        "primary_button_title": "Cảm ơn mọi người! ",
         "campaign": "locket_gold_welcome_shadow",
         "start_at": "2007-09-02T00:00:00",
         "end_at": "2099-12-31T23:59:59",
@@ -456,7 +455,7 @@
                 entries["gold_active"] = "true";
                 entries["v2_refresh"] = "true";
 
-                // 9. Cấu hình khung viền widget ngoài màn hình chính (frame_ba_khi)
+                // 9. Cấu hình khung viền widget ngoài màn hình chính
                 const custom_frame_obj = JSON.stringify({
                     "uid": "frame_mphong_1",
                     "url": "https://i.ibb.co/zV41vyJ2/t-i-xu-ng-1.png",
@@ -472,7 +471,7 @@
                 entries["widget_frame_enabled"] = "true";
                 entries["widget_frame_events_enabled"] = "true";
 
-                // 10. Thông báo Lên Gold & Cảnh báo Chống Scam
+                // 10. Thông báo Lên Gold & Cảnh báo Chống Scam.
                 entries["feature_discovery_popup_config"] = JSON.stringify(CUSTOM_POPUP_CONFIG);
 
                 // 11. Vô hiệu hóa Paywall & Upsell chặn áp dụng Filter
@@ -518,8 +517,8 @@
                         let pw = JSON.parse(entries["paywall_config"]);
                         pw.completed_title = { en: "Đã lên Gold rồi nhé! ✨", vi: "Đã lên Gold rồi nhé! ✨" };
                         pw.completed_subtitle = {
-                            en: "Locket gold 2026",
-                            vi: "Locket gold 2026"
+                            en: "Locket Gold 2026",
+                            vi: "Locket Gold 2026"
                         };
                         pw.completed_button_title = { en: "Vào Dùng Ngay", vi: "Vào Dùng Ngay" };
                         entries["paywall_config"] = JSON.stringify(pw);
