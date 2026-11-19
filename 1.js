@@ -90,7 +90,7 @@
         "feature_set": [{
             "title": "Locket Gold AI & Filter ",
             "body": "Đã hiện lên popup này hãy chờ 1 xíu ",
-            "imageURL": "https://i.ibb.co/zV41vyJ2/t-i-xu-ng-1.png"
+            "imageURL": "https://i.ibb.co/6cFwbQkZ/1793207893345-51238425216241447-1744175342587368869-364a1c7f2515c3737089ab5396e48341.png"
         }],
         "primary_button_title": "Cảm ơn mọi người! ",
         "campaign": "locket_gold_welcome_shadow",
